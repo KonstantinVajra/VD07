@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Аккаунт{% endblock %}
+
+{% block content %}
+    <h1 class="mb-3">Ваш аккаунт</h1>
+    <p>Имя: <strong>{{ current_user.username }}</strong></p>
+    <p>Email: <strong>{{ current_user.email }}</strong></p>
+
+    <a href="{{ url_for('main.edit_profile') }}" class="btn btn-secondary mt-3">Редактировать профиль</a>
+{% endblock %}
